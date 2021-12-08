@@ -2,7 +2,7 @@
 This part of the reposotory serves as base for all experiments done in the Master thesis and for replication of obtained results/
 
 ## Data description
-Data used in this experiment:
+Data used :
 * TRAINING:
     * czeng_train (data desscription [here](https://ufal.mff.cuni.cz/czeng))
 * VALIDATION:
