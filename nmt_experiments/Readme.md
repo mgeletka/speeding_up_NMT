@@ -1,5 +1,5 @@
 # NMT experiments
-This part of the reposotory serves as base for all experiments done in the Master thesis and for replication of obtained results/
+This part of the reposotory serves as base for all experiments done in the Master thesis for replication of all obtained results
 
 ## Data description
 Data used :
