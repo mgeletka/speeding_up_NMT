@@ -1,0 +1,27 @@
+{
+  "name": "nmt-demo-app-js-server",
+  "version": "1.0.0",
+  "description": "Demo app for NMT solutions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "keywords": [],
+  "author": "Martin Geletka",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^14.0.27",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "express": "^4.17.1",
+    "express-flash": "^0.0.2",
+    "https": "^1.0.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "axios": "^0.23.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}

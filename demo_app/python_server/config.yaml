@@ -1,0 +1,132 @@
+models:
+  spell_correction:
+    cs:
+      auto_regressive_base:
+        type: auto_regressive
+        sentencepiece_model: data/models/spell_correction/cs/auto_regressive_base/sentence_piece/bpe_32k.csmono.model
+        checkpoint_directory: data/models/spell_correction/cs/auto_regressive_base/checkpoints
+        checkpoint_filename: checkpoint_best.pt
+        data_bin: data/models/spell_correction/cs/auto_regressive_base/data-bin
+
+  translation:
+    cs2en:
+      ### AUTO-REGRESSIVE MODELS
+      auto_regressive_base:
+        type: auto_regressive
+        sentencepiece_model: data/models/translation/cs2en/auto_regressive_base/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: data/models/translation/cs2en/auto_regressive_base/checkpoints
+        checkpoint_filename: checkpoint_average_5_before_last.pt
+        data_bin: data/models/translation/cs2en/auto_regressive_base/data-bin
+
+    en2cs:
+      ### AUTO-REGRESSIVE MODELS
+      auto_regressive_base:
+        type: auto_regressive
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: data/models/translation/en2cs/auto_regressive_base/checkpoints
+        checkpoint_filename: checkpoint_best.pt
+        data_bin: data/models/default/data-bin
+
+      auto_regressive_tiny:
+        type: auto_regressive
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints-tiny-autoregressive
+        checkpoint_filename: checkpoint_best.pt
+        data_bin: data/models/default/data-bin
+
+      auto_regressive_small:
+        type: auto_regressive
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: data/models/translation/en2cs/auto_regressive_small/checkpoints
+        checkpoint_filename: checkpoint_best.pt
+        data_bin: data/models/default/data-bin
+
+      auto_regressive_wide:
+        type: auto_regressive
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: data/models/translation/en2cs/auto_regressive_wide/checkpoints
+        checkpoint_filename: checkpoint_average_8_before_last.pt
+        data_bin: data/models/default/data-bin
+
+      auto_regressive_deep:
+        type: auto_regressive
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints-deep
+        checkpoint_filename: checkpoint_average5.pt
+        data_bin: data/models/default/data-bin
+
+      
+     ## LEVENSHTEIN MODELS
+      levenshtein_base:
+        type: levenshtein
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints-base-levenshtein 
+        checkpoint_filename: checkpoint_average5.pt
+        data_bin: data/models/default/data-bin
+
+      levenshtein_tiny:
+        type: levenshtein
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: data/models/translation/en2cs/levenshtein_tiny/checkpoints
+        checkpoint_filename: checkpoint_best.pt
+        data_bin: data/models/default/data-bin
+
+      levenshtein_small:
+        type: levenshtein
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints-small-levenshtein
+        checkpoint_filename: checkpoint_average5.pt
+        data_bin: data/models/default/data-bin
+
+      levenshtein_wide:
+        type: levenshtein
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints-wide-levenshtein
+        checkpoint_filename: checkpoint_average5.pt
+        data_bin: data/models/default/data-bin
+
+     ## LEVENSHTEIN DISTILL
+      levenshtein_distill_tiny:
+        type: levenshtein
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints-distill-small-levenshtein
+        checkpoint_filename: checkpoint_average5.pt
+        data_bin: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/data-distill-bin
+
+      levenshtein_distill_small:
+        type: levenshtein
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints-levenshthein-really-small-distill
+        checkpoint_filename: checkpoint_best.pt
+        data_bin: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/data-distill-bin
+
+
+      levenshtein_distill_base:
+        type: levenshtein
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints-distill-base-levenshtein
+        checkpoint_filename: checkpoint_average5.pt
+        data_bin: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/data-distill-bin
+
+   ## Large encoder, Shallow decoder
+      large_encoder_shallow_decoder_tiny:
+        type: auto_regressive
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints-tiny-large-encoder-autoregressive
+        checkpoint_filename: checkpoint_best.pt
+        data_bin: data/models/default/data-bin
+      large_encoder_shallow_decoder_base:
+        type: auto_regressive
+        sentencepiece_model: data/models/default/sentence_piece/bpe.cs-en.32000.model
+        checkpoint_directory: /home/geletka/experiments/experiments-nmt-en2cs/nmt-experiments/checkpoints_base_large_encoder_model
+        checkpoint_filename: checkpoint_best.pt
+        data_bin: data/models/default/data-bin
+
+
+
+
+
+        
+
+      
+

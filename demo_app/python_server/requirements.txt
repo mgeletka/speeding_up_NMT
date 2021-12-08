@@ -1,0 +1,6 @@
+beautifulsoup4~=4.9.3
+regex~=2021.3.17
+git+git://github.com/pytorch/fairseq.git@3dd3940dc6105c8bf50f3a1be810cc035d2f105d
+sentencepiece~=0.1.95
+tensorboard~=2.4.1
+flask~=2.0.2
