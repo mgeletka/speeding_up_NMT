@@ -1,6 +1,8 @@
 
 # Demo application
 This part of the repository implenets the demo application developed to demonstrate trained models in my Master Thesis.
+The Demo application is currently deployed on: <a href="https://demo-nmt-app.artin.cz/" title="https://demo-nmt-app.artin.cz/</a>
+
 
 ## Parts of the Demo application
 * Python server -- exposes \href{https://flask.palletsprojects.com/en/2.0.x/}{Flask REST API} for usages of trained models using Fairseq library, the server has three different Rest Endpoints for translation, paraphrasing, and spell-correction
