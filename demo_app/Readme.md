@@ -1,7 +1,7 @@
 
 # Demo application
 This part of the repository implenets the demo application developed to demonstrate trained models in my Master Thesis.
-The Demo application is currently deployed on: <a href="https://demo-nmt-app.artin.cz/" title="https://demo-nmt-app.artin.cz/</a>
+The Demo application is currently deployed on:https://demo-nmt-app.artin.cz/
 
 
 ## Parts of the Demo application
